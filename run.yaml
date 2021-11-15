@@ -1,4 +1,4 @@
-docker-run:
+container:
   image: "crafter-appo-baseline:latest"
   command: 'python main.py --config_path crafter_baseline.yaml'
   tty: True
@@ -13,11 +13,4 @@ code:
 host_config:
   runtime: nvidia
   shm_size: 4g
-  mem_limit: 100g
-info:
-  container_name:
-    parts:
-      - user
-      - minecraft
-    delimiter: '.'
-
+  mem_limit: 32g
