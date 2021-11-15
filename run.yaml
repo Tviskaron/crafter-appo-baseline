@@ -1,0 +1,23 @@
+docker-run:
+  image: "crafter-appo-baseline:latest"
+  command: 'python main.py --config_path crafter_baseline.yaml'
+  tty: True
+  environment:
+    - "WANDB_API_KEY=<YOUR API KEY>"
+    - "OMP_NUM_THREADS=1"
+    - "MKL_NUM_THREADS=1"
+    - "NVIDIA_VISIBLE_DEVICES=0"
+code:
+  folder: "."
+
+host_config:
+  runtime: nvidia
+  shm_size: 4g
+  mem_limit: 100g
+info:
+  container_name:
+    parts:
+      - user
+      - minecraft
+    delimiter: '.'
+

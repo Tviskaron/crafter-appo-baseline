@@ -1,0 +1,23 @@
+name: crafter-appo-baseline
+
+global_settings:
+  use_wandb: True
+
+experiment_settings:
+  save_every_sec: 120
+  train_for_env_steps: 100000000
+
+async_ppo:
+
+  experiment_summaries_interval: 5
+  ppo_epochs: 1
+  batch_size:
+    grid_search: [1024, 2048]
+
+  use_rnn: True
+  max_grad_norm: 0.0
+  num_workers: 32
+  num_envs_per_worker: 20
+
+environment:
+  name: "CrafterReward-v1"
