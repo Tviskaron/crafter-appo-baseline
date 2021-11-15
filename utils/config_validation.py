@@ -27,6 +27,7 @@ class AsyncPPO(BaseModel, extra=Extra.forbid):
 
     exploration_loss_coeff: float = 0.003
     value_loss_coeff: float = 0.5
+    kl_loss_coeff: float = 0.0
     exploration_loss: str = 'entropy'
     num_envs_per_worker: int = 32
     worker_num_splits: int = 2
