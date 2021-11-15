@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
+FROM pytorch/pytorch
 RUN apt update && apt install build-essential ffmpeg libsm6 libxext6 git -y
 
 RUN apt-get update && apt-get install -y \
@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
   unrar \
   wget \
   && apt-get clean
+
+# fixing ruamel.yaml 
+RUN conda install ruamel.yaml -y
 
 ADD requirements.txt /tmp/
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
