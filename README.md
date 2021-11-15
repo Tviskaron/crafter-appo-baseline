@@ -1,4 +1,17 @@
-# crafter-appo-baseline
+# SampleFactory APPO baseline for Crafter environment
+
+
+## Installation
+Just install all dependencies using:
+```bash
+pip install -r docker/requirements.txt
+```
+
+## Training APPO
+Just run ```train.py``` with config_path:
+```bash
+python main.py --config_path crafter_baseline.yaml
+```
 
 ## Docker 
 We use [crafting](https://pypi.org/project/crafting/) to automate our experiments. 
