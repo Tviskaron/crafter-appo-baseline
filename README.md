@@ -13,6 +13,11 @@ Just run ```train.py``` with config_path:
 python main.py --config_path crafter_baseline.yaml
 ```
 
+## Results:
+```
+coming soon
+```
+
 ## Docker 
 We use [crafting](https://pypi.org/project/crafting/) to automate our experiments. 
 You can find an example of running such a pipeline in ```run.yaml``` file. 
