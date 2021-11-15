@@ -32,7 +32,7 @@ def make_crafter(full_env_name, cfg=None, env_config=None):
 
 def crafter_extra_summaries(policy_id, policy_avg_stats, env_steps, summary_writer, cfg):
     score = np.mean(policy_avg_stats["Score"])
-    log.debug(f'Score: {round(float(score))}')
+    log.debug(f'Score: {round(float(score), 3)}')
     summary_writer.add_scalar('Score', score, env_steps)
 
     num_achievements = np.mean(policy_avg_stats["Num_achievements"])
